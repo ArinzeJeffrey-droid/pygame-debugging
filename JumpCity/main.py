@@ -205,7 +205,7 @@ while run:
     if slade.visible == True and starfire.visible == True:
         if starfire.hitbox[1] < slade.hitbox[1] + slade.hitbox[3] and starfire.hitbox[1] + starfire.hitbox[3] > slade.hitbox[1]: 
             if starfire.hitbox[0] + starfire.hitbox[2] > slade.hitbox[0] and starfire.hitbox[0] < slade.hitbox[0] + slade.hitbox[2]:
-                collisionSound.play() 
+                # collisionSound.play() 
                 starfire.hit()
                 slade.enemyAndplayerCollision() 
                 score -= 5
@@ -214,7 +214,7 @@ while run:
          # If a starbolt is within the x and y coordinates then its inside slade's hotbox, slade.hitbox[0] is his x coord. 
         if starbolt.y - starbolt.radius < slade.hitbox[1] + slade.hitbox[3] and starbolt.y + starbolt.radius > slade.hitbox[1] : 
             if starbolt.x + starbolt.radius > slade.hitbox[0] and starbolt.x - starbolt.radius < slade.hitbox[0] + slade.hitbox[2]:
-                hitSound.play()
+                # hitSound.play()
                 slade.hit()
                 score += 1
                 starbolts.pop(starbolts.index(starbolt)) # starbolt should disappear after collision 
@@ -237,7 +237,7 @@ while run:
     keys = pygame.key.get_pressed()
 
     if keys[pygame.K_SPACE] and shootLoop == 0:
-        starboltSound.play()
+        # starboltSound.play()
         if starfire.left:
             facing = -1
         else:
